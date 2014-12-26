@@ -17,12 +17,16 @@ shinyUI(fluidPage(
                # Copy the chunk below to make a group of checkboxes
                radioButtons("radio", label = h3("Gender"),
                             choices = list("Male" = 1, "Female" = 2), 
-                            selected = 1),
+                            selected = 2),
                
               # Copy the line below to make a date range selector
               textInput("fromYear", label = h3("From year"), value = minYear),
               textInput("toYear", label = h3("To year"), value = maxYear ),
-              actionButton("plotButton", "Plot")
+              actionButton("plotButton", "Plot"),
+              
+              br(),
+              h3("Documentation:"),
+              p("Enter a name, select a gender, and input year ranges (minimum is 1880, maximum 2013) to see a plot of the trend for that particular name over the years")
               
               ),
   
